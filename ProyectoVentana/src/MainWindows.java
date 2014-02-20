@@ -1,8 +1,10 @@
-import javax.swing.JFrame;
+import javax.swing.JButton;// creacion de botones
+import javax.swing.JFrame;// creacion de ventanas
 public class MainWindows extends JFrame {
-	private int altura;
-	private int ancho;
+	private int altura=0;
+	private int ancho=0;
 	private String titulo="";
+	JButton btn;
 	public MainWindows (int ancho,int altura,String titulo)
 	{
 		this.setSize(ancho,altura);
@@ -16,6 +18,9 @@ public class MainWindows extends JFrame {
 		this.setTitle(titulo);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		btn = new JButton("hola mundo grafico");
+		//add(btn);
+		this.add(btn);
 	}
 	public void setaltura(int altura)
 	{
