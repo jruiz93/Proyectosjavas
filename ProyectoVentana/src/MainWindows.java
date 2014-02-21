@@ -1,3 +1,5 @@
+import java.awt.BorderLayout;
+
 import javax.swing.JButton;// creacion de botones
 import javax.swing.JFrame;// creacion de ventanas
 public class MainWindows extends JFrame {
@@ -11,17 +13,32 @@ public class MainWindows extends JFrame {
 		this.setTitle(titulo);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(btn);
+		this.setVisible(true);
 	}	
 	public MainWindows()
 	{
-		this.setSize(ancho,altura);
-		this.setTitle(titulo);
-		this.setVisible(true);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		btn = new JButton("hola mundo grafico");
-		//add(btn);
+		setLayout(new BorderLayout());
+		//BorderLayout border = new BorderLayout();
+		//setLayout(border);
 		this.add(btn);
+		add(btn,BorderLayout.NORTH);
+		add(new TextPanel(),BorderLayout.CENTER);
+		add(new JButton("SUR"),BorderLayout.SOUTH);
+		add(new JButton("ESTE"),BorderLayout.EAST);
+		add(new JButton("OESTE"),BorderLayout.WEST);
+		
+		
+		
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
 	}
+	
+	
 	public void setaltura(int altura)
 	{
 		this.altura=altura;
