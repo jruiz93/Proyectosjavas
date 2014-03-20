@@ -17,6 +17,7 @@ private JButton btn;
 public TextPanel()
 {
 	setLayout(new BorderLayout());
+	btn=new JButton("boton");
 	btn= new JButton("click aqui");
 	btn.addActionListener(new ActionListener(){
 
